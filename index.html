@@ -1,135 +1,2194 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#050505">
-<meta name="description" content="Onyx Enterprise — Creative design, motion graphics, web design, online business assistance, packaging and printing.">
-<title>ONYX ENTERPRISE — Built to Be Seen</title>
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
-:root{--bg:#050505;--panel:#0c0c0d;--panel2:#111113;--text:#f7f7f5;--muted:#9a9a9f;--line:#242426;--white:#fff}
-*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
-body{font-family:Inter,Arial,sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden}
-a{text-decoration:none;color:inherit}.wrap{width:min(1180px,92%);margin:auto}
-nav{position:fixed;top:0;left:0;right:0;z-index:100;border-bottom:1px solid rgba(255,255,255,.08);background:rgba(5,5,5,.72);backdrop-filter:blur(18px)}
-.nav{height:76px;display:flex;align-items:center;justify-content:space-between}
-.brand{display:flex;align-items:center;gap:11px;font-weight:900;letter-spacing:.12em}.mark{width:34px;height:34px;border:1px solid #777;border-radius:9px;display:grid;place-items:center;font-weight:900;font-size:14px}
-.links{display:flex;gap:28px;color:#aaa;font-size:13px}.links a:hover{color:#fff}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:1px solid var(--line);border-radius:999px;padding:12px 19px;font-weight:800;font-size:13px;transition:.25s}
-.btn:hover{transform:translateY(-3px);border-color:#555}.btn.light{background:#fff;color:#050505;border-color:#fff}
-.hero{min-height:100vh;display:flex;align-items:center;position:relative;padding:140px 0 80px}
-.hero:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 75% 35%,rgba(255,255,255,.12),transparent 27%),radial-gradient(circle at 20% 75%,rgba(255,255,255,.05),transparent 30%);pointer-events:none}
-.gridbg{position:absolute;inset:0;opacity:.25;background-image:linear-gradient(#fff 1px,transparent 1px),linear-gradient(90deg,#fff 1px,transparent 1px);background-size:70px 70px;mask-image:linear-gradient(to bottom,black,transparent 85%);pointer-events:none}
-.eyebrow{display:inline-flex;gap:8px;align-items:center;color:#aaa;font-size:11px;letter-spacing:.2em;text-transform:uppercase;border:1px solid var(--line);padding:8px 12px;border-radius:99px;background:#0b0b0c}
-.dot{width:6px;height:6px;background:#fff;border-radius:50%;box-shadow:0 0 14px #fff}
-h1{font-size:clamp(4rem,10vw,9.2rem);line-height:.83;letter-spacing:-.085em;max-width:1000px;margin:24px 0}
-h1 span{color:#777}
-.hero-copy{max-width:670px;color:#aaa;font-size:17px;line-height:1.75}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
-.hero-note{margin-top:25px;color:#68686d;font-size:11px;letter-spacing:.08em;text-transform:uppercase}
-section{padding:115px 0}.sectiontop{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:45px}.label{font-size:10px;color:#777;letter-spacing:.22em;text-transform:uppercase;margin-bottom:12px}h2{font-size:clamp(2.4rem,5vw,5rem);line-height:.95;letter-spacing:-.065em} .sectiondesc{max-width:430px;color:#929297;line-height:1.7;font-size:14px}
-.services{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}
-.service{min-height:285px;padding:30px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);position:relative;overflow:hidden;transition:.3s}
-.service:hover{background:#0d0d0f}.service:after{content:"↗";position:absolute;right:27px;top:27px;color:#555;font-size:22px}.service-num{font-size:10px;color:#666;letter-spacing:.15em}.service-icon{font-size:30px;margin:38px 0 20px}.service h3{font-size:20px;margin-bottom:9px}.service p{color:#85858b;font-size:13px;line-height:1.7}
-.showcase{display:grid;grid-template-columns:1.2fr .8fr;gap:16px}.project{min-height:390px;border:1px solid var(--line);border-radius:24px;padding:30px;position:relative;overflow:hidden;background:linear-gradient(135deg,#151517,#080809)}.project.small{min-height:187px}.project:before{content:"";position:absolute;width:240px;height:240px;border-radius:50%;right:-80px;top:-80px;background:radial-gradient(circle,#555,transparent 65%);opacity:.25}.project .tag{font-size:10px;color:#888;text-transform:uppercase;letter-spacing:.18em}.project h3{font-size:32px;letter-spacing:-.05em;position:absolute;left:30px;bottom:55px}.project p{position:absolute;left:30px;bottom:28px;color:#888;font-size:12px}.stack{display:grid;gap:16px}
-.packages{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.package{border:1px solid var(--line);border-radius:20px;padding:28px;background:linear-gradient(150deg,#101012,#09090a)}.package.featured{background:#f4f4f2;color:#080808}.package small{font-size:10px;text-transform:uppercase;letter-spacing:.2em;opacity:.55}.package h3{font-size:25px;margin:18px 0 8px}.price{font-size:13px;opacity:.7;margin-bottom:25px}.package ul{list-style:none;display:grid;gap:11px;color:#888;font-size:13px}.featured ul{color:#555}.package li:before{content:"✓";margin-right:9px}.package .btn{margin-top:27px;width:100%}
-.process{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:20px;overflow:hidden}.step{background:#0a0a0b;padding:30px;min-height:230px}.step .n{font-size:11px;color:#666}.step h3{margin:48px 0 9px;font-size:18px}.step p{font-size:12px;color:#777;line-height:1.7}
-.testimonial{border:1px solid var(--line);border-radius:25px;padding:50px;background:linear-gradient(130deg,#101012,#080809);text-align:center}.quote{font-size:clamp(1.7rem,4vw,3.5rem);line-height:1.15;letter-spacing:-.05em;max-width:850px;margin:auto}.who{color:#777;font-size:12px;margin-top:25px}
-.cta{padding:75px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);text-align:center}.cta h2{max-width:850px;margin:auto}.cta p{color:#888;max-width:550px;margin:20px auto 28px;font-size:14px}.contactline{margin-top:22px;color:#666;font-size:12px}
-footer{padding:30px 0;color:#68686d;font-size:11px}.foot{display:flex;justify-content:space-between;gap:20px}
+    <meta charset="UTF-8">
 
-.media-showcase{display:grid;grid-template-columns:1.05fr .95fr;gap:16px;margin-top:24px}
-.media-card{position:relative;min-height:330px;border:1px solid var(--line);border-radius:22px;overflow:hidden;background:#0b0b0d}
-.media-card img{width:100%;height:100%;min-height:330px;object-fit:cover;display:block;opacity:.78;transition:.45s}
-.media-card:hover img{transform:scale(1.045);opacity:.95}
-.media-overlay{position:absolute;inset:0;padding:25px;display:flex;flex-direction:column;justify-content:flex-end;background:linear-gradient(to top,rgba(0,0,0,.9),transparent 60%)}
-.media-overlay .tag{font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:#aaa}
-.media-overlay h3{font-size:28px;letter-spacing:-.05em;margin-top:8px}
-.media-overlay p{color:#aaa;font-size:12px;margin-top:6px}
-.media-stack{display:grid;gap:16px}
-.media-stack .media-card{min-height:157px}
-.media-stack .media-card img{min-height:157px}
-.reel{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:24px}
-.video-box{border:1px solid var(--line);border-radius:22px;overflow:hidden;background:#000;min-height:350px}
-.video-box iframe{width:100%;height:100%;min-height:350px;border:0;display:block}
-.reel-copy{border:1px solid var(--line);border-radius:22px;padding:34px;background:linear-gradient(135deg,#111114,#09090a)}
-.reel-copy h3{font-size:35px;letter-spacing:-.06em;margin:15px 0}
-.reel-copy p{color:#888;font-size:13px;line-height:1.8}
-.reel-copy .mini-list{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:25px}
-.reel-copy .mini-list div{border:1px solid var(--line);padding:12px;border-radius:10px;color:#aaa;font-size:11px}
-@media(max-width:850px){.media-showcase,.reel{grid-template-columns:1fr}}
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-@media(max-width:850px){.links{display:none}.services,.packages{grid-template-columns:1fr 1fr}.showcase{grid-template-columns:1fr}.process{grid-template-columns:1fr 1fr}}
-@media(max-width:560px){section{padding:80px 0}.services,.packages,.process{grid-template-columns:1fr}.hero{padding-top:120px}h1{font-size:clamp(3.5rem,18vw,6rem)}.sectiontop{display:block}.sectiondesc{margin-top:18px}.showcase .project{min-height:300px}.foot{display:block}.foot div+div{margin-top:8px}}
-</style>
+    <meta
+        name="theme-color"
+        content="#080808"
+    >
+
+    <meta
+        name="description"
+        content="Onyx Enterprise — Design, web, motion, packaging and printing."
+    >
+
+    <title>Onyx Enterprise — Built To Be Seen</title>
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <style>
+
+        /* =========================
+           RESET
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+            font-family: "Inter", Arial, sans-serif;
+
+            background: #070707;
+
+            color: #f5f5f5;
+
+            overflow-x: hidden;
+        }
+
+
+        a {
+            color: inherit;
+
+            text-decoration: none;
+        }
+
+
+        button {
+            font-family: inherit;
+
+            cursor: pointer;
+        }
+
+
+        img {
+            max-width: 100%;
+
+            display: block;
+        }
+
+
+        /* =========================
+           VARIABLES
+        ========================= */
+
+        :root {
+            --background: #070707;
+
+            --surface: #0d0d0e;
+
+            --surface-2: #111113;
+
+            --border: #252527;
+
+            --border-light: #303033;
+
+            --white: #f5f5f5;
+
+            --muted: #909095;
+
+            --dark-muted: #626267;
+
+            --accent: #d7fff9;
+        }
+
+
+        /* =========================
+           CONTAINER
+        ========================= */
+
+        .container {
+            width: min(1180px, 92%);
+
+            margin: auto;
+        }
+
+
+        /* =========================
+           NAVIGATION
+        ========================= */
+
+        .navbar {
+            position: fixed;
+
+            top: 0;
+            left: 0;
+            right: 0;
+
+            z-index: 1000;
+
+            height: 74px;
+
+            border-bottom: 1px solid rgba(255,255,255,.08);
+
+            background: rgba(7,7,7,.78);
+
+            backdrop-filter: blur(18px);
+
+            -webkit-backdrop-filter: blur(18px);
+        }
+
+
+        .nav-inner {
+            height: 100%;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+        }
+
+
+        /* LOGO */
+
+        .logo {
+            display: flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+            font-size: 13px;
+
+            font-weight: 800;
+
+            letter-spacing: 2px;
+        }
+
+
+        .logo-mark {
+            width: 35px;
+            height: 35px;
+
+            display: grid;
+
+            place-items: center;
+
+            border: 1px solid #555;
+
+            border-radius: 10px;
+
+            font-size: 14px;
+
+            font-weight: 900;
+        }
+
+
+        /* NAV LINKS */
+
+        .nav-links {
+            display: flex;
+
+            align-items: center;
+
+            gap: 28px;
+
+            color: #8d8d92;
+
+            font-size: 12px;
+        }
+
+
+        .nav-links a {
+            transition: .2s ease;
+        }
+
+
+        .nav-links a:hover {
+            color: white;
+        }
+
+
+        /* NAV RIGHT */
+
+        .nav-right {
+            display: flex;
+
+            align-items: center;
+
+            gap: 14px;
+        }
+
+
+        .user-name {
+            color: #8f8f94;
+
+            font-size: 11px;
+        }
+
+
+        .nav-button {
+            padding: 10px 16px;
+
+            border: 1px solid #303033;
+
+            border-radius: 999px;
+
+            font-size: 11px;
+
+            font-weight: 700;
+
+            transition: .2s ease;
+        }
+
+
+        .nav-button:hover {
+            border-color: #666;
+
+            transform: translateY(-2px);
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            min-height: 100vh;
+
+            display: flex;
+
+            align-items: center;
+
+            position: relative;
+
+            padding: 130px 0 80px;
+
+            overflow: hidden;
+        }
+
+
+        .hero::before {
+            content: "";
+
+            position: absolute;
+
+            width: 650px;
+            height: 650px;
+
+            right: -250px;
+            top: 100px;
+
+            border-radius: 50%;
+
+            background:
+                radial-gradient(
+                    circle,
+                    rgba(255,255,255,.08),
+                    transparent 65%
+                );
+
+            pointer-events: none;
+        }
+
+
+        .hero-grid {
+            position: absolute;
+
+            inset: 0;
+
+            opacity: .18;
+
+            background-image:
+                linear-gradient(
+                    rgba(255,255,255,.035) 1px,
+                    transparent 1px
+                ),
+                linear-gradient(
+                    90deg,
+                    rgba(255,255,255,.035) 1px,
+                    transparent 1px
+                );
+
+            background-size: 70px 70px;
+
+            mask-image:
+                linear-gradient(
+                    to bottom,
+                    black,
+                    transparent 90%
+                );
+
+            pointer-events: none;
+        }
+
+
+        .hero-content {
+            position: relative;
+
+            z-index: 2;
+
+            max-width: 900px;
+        }
+
+
+        .welcome {
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            padding: 8px 13px;
+
+            border: 1px solid var(--border);
+
+            border-radius: 999px;
+
+            color: #99999d;
+
+            background: rgba(255,255,255,.025);
+
+            font-size: 10px;
+
+            letter-spacing: .08em;
+
+            text-transform: uppercase;
+        }
+
+
+        .welcome-dot {
+            width: 6px;
+            height: 6px;
+
+            border-radius: 50%;
+
+            background: #eee;
+
+            box-shadow:
+                0 0 12px rgba(255,255,255,.7);
+        }
+
+
+        .hero h1 {
+            margin-top: 25px;
+
+            font-size: clamp(
+                4rem,
+                10vw,
+                8.8rem
+            );
+
+            line-height: .84;
+
+            letter-spacing: -.09em;
+
+            font-weight: 900;
+        }
+
+
+        .hero h1 span {
+            color: #656569;
+        }
+
+
+        .hero-description {
+            max-width: 650px;
+
+            margin-top: 30px;
+
+            color: #97979c;
+
+            font-size: 16px;
+
+            line-height: 1.8;
+        }
+
+
+        .hero-buttons {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 12px;
+
+            margin-top: 30px;
+        }
+
+
+        .button {
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 9px;
+
+            padding: 13px 19px;
+
+            border: 1px solid var(--border-light);
+
+            border-radius: 999px;
+
+            font-size: 12px;
+
+            font-weight: 700;
+
+            transition: .25s ease;
+        }
+
+
+        .button:hover {
+            transform: translateY(-3px);
+
+            border-color: #555;
+        }
+
+
+        .button-primary {
+            color: #080808;
+
+            background: white;
+
+            border-color: white;
+        }
+
+
+        .button-primary:hover {
+            box-shadow:
+                0 12px 30px rgba(255,255,255,.08);
+        }
+
+
+        .hero-caption {
+            margin-top: 25px;
+
+            color: #57575c;
+
+            font-size: 10px;
+
+            letter-spacing: .12em;
+
+            text-transform: uppercase;
+        }
+
+
+        /* =========================
+           GENERAL SECTIONS
+        ========================= */
+
+        section {
+            padding: 110px 0;
+        }
+
+
+        .section-header {
+            display: flex;
+
+            align-items: flex-end;
+
+            justify-content: space-between;
+
+            gap: 30px;
+
+            margin-bottom: 45px;
+        }
+
+
+        .section-label {
+            margin-bottom: 12px;
+
+            color: #69696e;
+
+            font-size: 10px;
+
+            letter-spacing: .2em;
+
+            text-transform: uppercase;
+        }
+
+
+        .section-title {
+            font-size: clamp(
+                2.5rem,
+                6vw,
+                5rem
+            );
+
+            line-height: .95;
+
+            letter-spacing: -.07em;
+        }
+
+
+        .section-description {
+            max-width: 420px;
+
+            color: #85858a;
+
+            font-size: 13px;
+
+            line-height: 1.8;
+        }
+
+
+        /* =========================
+           SERVICES
+        ========================= */
+
+        .services {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            border-top: 1px solid var(--border);
+
+            border-left: 1px solid var(--border);
+        }
+
+
+        .service {
+            min-height: 260px;
+
+            padding: 30px;
+
+            border-right: 1px solid var(--border);
+
+            border-bottom: 1px solid var(--border);
+
+            position: relative;
+
+            overflow: hidden;
+
+            transition: .3s ease;
+        }
+
+
+        .service:hover {
+            background: #0d0d0f;
+        }
+
+
+        .service-number {
+            color: #5d5d61;
+
+            font-size: 10px;
+
+            letter-spacing: .15em;
+        }
+
+
+        .service-icon {
+            width: 48px;
+            height: 48px;
+
+            display: grid;
+
+            place-items: center;
+
+            margin: 35px 0 22px;
+
+            border: 1px solid #29292c;
+
+            border-radius: 14px;
+
+            color: #cfcfd1;
+
+            font-size: 20px;
+        }
+
+
+        .service h3 {
+            margin-bottom: 10px;
+
+            font-size: 19px;
+
+            letter-spacing: -.03em;
+        }
+
+
+        .service p {
+            max-width: 280px;
+
+            color: #77777d;
+
+            font-size: 12px;
+
+            line-height: 1.75;
+        }
+
+
+        .service-arrow {
+            position: absolute;
+
+            right: 28px;
+            top: 28px;
+
+            color: #55555a;
+
+            font-size: 19px;
+        }
+
+
+        /* =========================
+           PORTFOLIO
+        ========================= */
+
+        .portfolio {
+            display: grid;
+
+            grid-template-columns:
+                1.2fr .8fr;
+
+            gap: 16px;
+        }
+
+
+        .project {
+            min-height: 390px;
+
+            position: relative;
+
+            overflow: hidden;
+
+            padding: 30px;
+
+            border: 1px solid var(--border);
+
+            border-radius: 22px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #151516,
+                    #080809
+                );
+        }
+
+
+        .project::before {
+            content: "";
+
+            position: absolute;
+
+            width: 330px;
+            height: 330px;
+
+            right: -140px;
+            top: -140px;
+
+            border-radius: 50%;
+
+            background:
+                radial-gradient(
+                    circle,
+                    rgba(255,255,255,.12),
+                    transparent 65%
+                );
+        }
+
+
+        .project-tag {
+            position: relative;
+
+            color: #88888d;
+
+            font-size: 9px;
+
+            letter-spacing: .18em;
+
+            text-transform: uppercase;
+        }
+
+
+        .project h3 {
+            position: absolute;
+
+            left: 30px;
+            bottom: 56px;
+
+            font-size: 34px;
+
+            letter-spacing: -.06em;
+        }
+
+
+        .project-description {
+            position: absolute;
+
+            left: 30px;
+            bottom: 30px;
+
+            color: #77777c;
+
+            font-size: 11px;
+        }
+
+
+        .portfolio-side {
+            display: grid;
+
+            gap: 16px;
+        }
+
+
+        .project-small {
+            min-height: 187px;
+        }
+
+
+        .project-small h3 {
+            font-size: 26px;
+
+            bottom: 48px;
+        }
+
+
+        .project-small .project-description {
+            bottom: 24px;
+        }
+
+
+        /* =========================
+           WORK WITH US
+        ========================= */
+
+        .work-box {
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 16px;
+        }
+
+
+        .work-card {
+            min-height: 330px;
+
+            padding: 35px;
+
+            border: 1px solid var(--border);
+
+            border-radius: 22px;
+
+            background: var(--surface);
+        }
+
+
+        .work-card h3 {
+            margin-top: 25px;
+
+            font-size: 31px;
+
+            line-height: 1;
+
+            letter-spacing: -.05em;
+        }
+
+
+        .work-card p {
+            max-width: 430px;
+
+            margin-top: 18px;
+
+            color: #7f7f84;
+
+            font-size: 13px;
+
+            line-height: 1.8;
+        }
+
+
+        .work-list {
+            display: grid;
+
+            gap: 10px;
+
+            margin-top: 25px;
+        }
+
+
+        .work-list div {
+            padding: 13px 15px;
+
+            border: 1px solid var(--border);
+
+            border-radius: 10px;
+
+            color: #aaa;
+
+            font-size: 11px;
+        }
+
+
+        /* =========================
+           ABOUT
+        ========================= */
+
+        .about {
+            display: grid;
+
+            grid-template-columns:
+                .7fr 1.3fr;
+
+            gap: 60px;
+
+            align-items: start;
+        }
+
+
+        .about-number {
+            color: #66666b;
+
+            font-size: 12px;
+
+            letter-spacing: .15em;
+        }
+
+
+        .about-text {
+            color: #99999e;
+
+            font-size: 20px;
+
+            line-height: 1.65;
+
+            letter-spacing: -.02em;
+        }
+
+
+        .about-text strong {
+            color: white;
+        }
+
+
+        /* =========================
+           CTA
+        ========================= */
+
+        .cta {
+            padding: 90px 0;
+
+            border-top: 1px solid var(--border);
+
+            border-bottom: 1px solid var(--border);
+
+            text-align: center;
+        }
+
+
+        .cta h2 {
+            max-width: 850px;
+
+            margin: auto;
+
+            font-size: clamp(
+                2.8rem,
+                7vw,
+                6.5rem
+            );
+
+            line-height: .9;
+
+            letter-spacing: -.08em;
+        }
+
+
+        .cta p {
+            max-width: 540px;
+
+            margin: 23px auto 28px;
+
+            color: #85858a;
+
+            font-size: 13px;
+
+            line-height: 1.7;
+        }
+
+
+        .cta-contact {
+            margin-top: 20px;
+
+            color: #66666b;
+
+            font-size: 11px;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            padding: 30px 0;
+
+            color: #626267;
+
+            font-size: 10px;
+        }
+
+
+        .footer-inner {
+            display: flex;
+
+            justify-content: space-between;
+
+            gap: 20px;
+        }
+
+
+        /* =========================
+           MOBILE NAV
+        ========================= */
+
+        .mobile-menu {
+            display: none;
+
+            width: 40px;
+            height: 40px;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border: 1px solid var(--border);
+
+            border-radius: 10px;
+
+            background: transparent;
+
+            color: white;
+
+            font-size: 18px;
+        }
+
+
+        /* =========================
+           TABLET
+        ========================= */
+
+        @media (max-width: 850px) {
+
+            .nav-links {
+                display: none;
+            }
+
+
+            .mobile-menu {
+                display: flex;
+            }
+
+
+            .services {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+
+            .portfolio {
+                grid-template-columns: 1fr;
+            }
+
+
+            .work-box {
+                grid-template-columns: 1fr;
+            }
+
+
+            .about {
+                grid-template-columns: 1fr;
+
+                gap: 25px;
+            }
+
+        }
+
+
+        /* =========================
+           PHONE
+        ========================= */
+
+        @media (max-width: 560px) {
+
+            .container {
+                width: min(92%, 500px);
+            }
+
+
+            .navbar {
+                height: 68px;
+            }
+
+
+            .logo {
+                font-size: 10px;
+
+                letter-spacing: 1.4px;
+            }
+
+
+            .logo-mark {
+                width: 32px;
+                height: 32px;
+            }
+
+
+            .user-name {
+                display: none;
+            }
+
+
+            .nav-button {
+                padding: 9px 13px;
+
+                font-size: 10px;
+            }
+
+
+            .hero {
+                min-height: 90vh;
+
+                padding-top: 110px;
+            }
+
+
+            .hero h1 {
+                font-size:
+                    clamp(
+                        3.5rem,
+                        18vw,
+                        6rem
+                    );
+            }
+
+
+            .hero-description {
+                font-size: 14px;
+            }
+
+
+            section {
+                padding: 75px 0;
+            }
+
+
+            .section-header {
+                display: block;
+            }
+
+
+            .section-description {
+                margin-top: 18px;
+            }
+
+
+            .services {
+                grid-template-columns: 1fr;
+            }
+
+
+            .service {
+                min-height: 240px;
+            }
+
+
+            .project {
+                min-height: 300px;
+            }
+
+
+            .project h3 {
+                font-size: 28px;
+            }
+
+
+            .work-card {
+                min-height: 290px;
+
+                padding: 26px;
+            }
+
+
+            .about-text {
+                font-size: 17px;
+            }
+
+
+            .footer-inner {
+                display: block;
+            }
+
+
+            .footer-inner div + div {
+                margin-top: 8px;
+            }
+
+        }
+
+    </style>
+
 </head>
+
+
 <body>
-<nav><div class="wrap nav">
-<a class="brand" href="#"><span class="mark">O</span> ONYX ENTERPRISE</a>
-<div class="links"><a href="#services">Services</a><a href="#work">Work</a><a href="#packages">Packages</a><a href="#contact">Contact</a></div>
-<a class="btn light" href="https://wa.me/2349115375285?text=Hello%20Onyx%20Enterprise%2C%20I%27d%20like%20to%20start%20a%20project.">Let's talk ↗</a>
-</div></nav>
-
-<header class="hero"><div class="gridbg"></div><div class="wrap">
-<div class="eyebrow"><span class="dot"></span> Creative studio for modern businesses</div>
-<h1>BUILT TO<br><span>BE SEEN.</span></h1>
-<p class="hero-copy">Onyx Enterprise combines design, digital, motion and print to help businesses build a stronger identity, communicate better and show up professionally online and offline.</p>
-<div class="hero-actions"><a class="btn light" href="#services">Explore services ↓</a><a class="btn" href="https://wa.me/2349115375285?text=Hello%20Onyx%20Enterprise%2C%20I%27d%20like%20to%20make%20an%20enquiry.">WhatsApp us</a></div>
-<div class="hero-note">Graphic design · Motion · Web · Packaging · Print · Digital support</div>
-</div></header>
-
-<section id="services"><div class="wrap">
-<div class="sectiontop"><div><div class="label">01 — Capabilities</div><h2>Everything your<br>brand needs.</h2></div><p class="sectiondesc">From your first idea to the final printed product, we make the creative side of business simpler.</p></div>
-<div class="services">
-<div class="service"><img class="service-img" src="https://www.kreowsky.de/build/assets/mediendesign-agentur-hrBYGF5q.webp" alt="Graphic design and branding mockups" style="width:100%;height:125px;object-fit:cover;border-radius:12px;margin:0 0 20px;opacity:.8"><span class="service-num">01 / 06</span><h3>Graphic Design</h3><p>Flyers, logos, social media designs, business cards, banners and complete visual identities.</p></div>
-<div class="service"><img class="service-img" src="https://www.alvinjampazar.com/assets/motion-hero-FiOQ30qv.jpg" alt="Motion graphics editing workstation" style="width:100%;height:125px;object-fit:cover;border-radius:12px;margin:0 0 20px;opacity:.8"><span class="service-num">02 / 06</span><h3>Motion Graphics</h3><p>Animated adverts, logo reveals, product promos and short-form content designed to stop the scroll.</p></div>
-<div class="service"><img class="service-img" src="https://www.clixoni.com/users/u17/17932/images/Blog%20Featured%20Images/Manchester%20web%20design%20agency.jpeg" alt="Website design shown on a laptop" style="width:100%;height:125px;object-fit:cover;border-radius:12px;margin:0 0 20px;opacity:.8"><span class="service-num">03 / 06</span><h3>Web Design</h3><p>Modern landing pages and business websites that make your company look credible and ready for customers.</p></div>
-<div class="service"><div style="height:125px;border-radius:12px;margin:0 0 20px;background:radial-gradient(circle at 30% 40%,#777,transparent 22%),linear-gradient(135deg,#222,#080808);display:grid;place-items:center;font-size:38px;color:#ddd">◎</div><span class="service-num">04 / 06</span><h3>Online Assistance</h3><p>Practical digital support for businesses that need help getting organized and presenting themselves online.</p></div>
-<div class="service"><img class="service-img" src="https://www.proalley.com/blog/content/images/size/w2000/2022/09/young-woman-working-animation-studio.jpg" alt="Creative production studio" style="width:100%;height:125px;object-fit:cover;border-radius:12px;margin:0 0 20px;opacity:.8"><span class="service-num">05 / 06</span><h3>Product Packaging</h3><p>Packaging concepts, labels and artwork that make products feel professional before customers even open them.</p></div>
-<div class="service"><img class="service-img" src="https://www.kreowsky.de/build/assets/mediendesign-agentur-hrBYGF5q.webp" alt="Printed branding materials" style="width:100%;height:125px;object-fit:cover;border-radius:12px;margin:0 0 20px;opacity:.8"><span class="service-num">06 / 06</span><h3>Printing</h3><p>Branded print materials including flyers, stickers, labels, cards, posters and more.</p></div>
-</div></div></div></section>
-
-<section id="work"><div class="wrap">
-<div class="sectiontop"><div><div class="label">02 — What we can build</div><h2>Ideas deserve<br>good execution.</h2></div><p class="sectiondesc">A few examples of the kind of work Onyx Enterprise can create for growing brands.</p></div>
-<div class="showcase">
-<div class="project"><span class="tag">Brand campaign / 01</span><h3>Launch a product.<br>Own the attention.</h3><p>Brand visuals + motion promo + social content</p></div>
-<div class="stack"><div class="project small"><span class="tag">Digital / 02</span><h3>Business website</h3><p>Responsive • Fast • Professional</p></div><div class="project small"><span class="tag">Print / 03</span><h3>Packaging & labels</h3><p>Designed to look good on the shelf</p></div></div>
-</div></div></section>
 
 
-<section id="media"><div class="wrap">
-<div class="sectiontop"><div><div class="label">02B — Visual showcase</div><h2>See the kind<br>of work we create.</h2></div><p class="sectiondesc">Visual examples give clients a feel for the quality and direction of each service before they contact us.</p></div>
-<div class="media-showcase">
-  <div class="media-card"><img src="https://www.kreowsky.de/build/assets/mediendesign-agentur-hrBYGF5q.webp" alt="Graphic design portfolio showcase"><div class="media-overlay"><span class="tag">Graphic Design</span><h3>Branding that looks the part.</h3><p>Identity systems • Social creatives • Print design</p></div></div>
-  <div class="media-stack">
-    <div class="media-card"><img src="https://www.clixoni.com/users/u17/17932/images/Blog%20Featured%20Images/Manchester%20web%20design%20agency.jpeg" alt="Modern website design mockup"><div class="media-overlay"><span class="tag">Web Design</span><h3>Websites built for business.</h3></div></div>
-    <div class="media-card"><img src="https://www.alvinjampazar.com/assets/motion-hero-FiOQ30qv.jpg" alt="Motion design workstation"><div class="media-overlay"><span class="tag">Motion Graphics</span><h3>Make your brand move.</h3></div></div>
-  </div>
-</div>
-<div class="reel">
-  <div class="video-box">
-    <iframe src="https://player.vimeo.com/video/1096970369?title=0&byline=0&portrait=0" title="Motion graphics showreel" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-  </div>
-  <div class="reel-copy"><div class="label">Motion Reel</div><h3>Motion turns attention into memory.</h3><p>We can use animated typography, logo reveals, product promos, transitions and visual effects to make your content feel more alive.</p><div class="mini-list"><div>Logo Animation</div><div>Promo Videos</div><div>Kinetic Type</div><div>Social Ads</div></div></div>
-</div>
-<p style="margin-top:14px;color:#555;font-size:10px;line-height:1.6">Demo media shown for visual inspiration. Replace these images/video with Onyx Enterprise's own portfolio as you complete projects. The embedded showreel is hosted by Vimeo and belongs to its creator.</p>
-</div></section>
-<section id="packages"><div class="wrap">
-<div class="sectiontop"><div><div class="label">03 — Starter packages</div><h2>Pick a direction.</h2></div><p class="sectiondesc">Packages are flexible. Tell us what you need and we'll tailor the scope to your business.</p></div>
-<div class="packages">
-<div class="package"><small>Starter</small><h3>Brand Kickoff</h3><div class="price">For businesses getting started</div><ul><li>Logo / brand mark</li><li>2 social media designs</li><li>Business card design</li><li>Print-ready files</li></ul><a class="btn" href="https://wa.me/2349115375285?text=Hello%20Onyx%20Enterprise%2C%20I%27m%20interested%20in%20the%20Brand%20Kickoff%20package.">Enquire</a></div>
-<div class="package featured"><small>Popular</small><h3>Digital Boost</h3><div class="price">For businesses ready to grow online</div><ul><li>Social media creatives</li><li>Motion promo</li><li>Landing page</li><li>Online business support</li></ul><a class="btn" href="https://wa.me/2349115375285?text=Hello%20Onyx%20Enterprise%2C%20I%27m%20interested%20in%20the%20Digital%20Boost%20package.">Start a project</a></div>
-<div class="package"><small>Custom</small><h3>Full Brand</h3><div class="price">For businesses that want the full treatment</div><ul><li>Brand identity</li><li>Website</li><li>Motion content</li><li>Packaging + print</li></ul><a class="btn" href="https://wa.me/2349115375285?text=Hello%20Onyx%20Enterprise%2C%20I%27m interested%20in%20a%20custom%20Full%20Brand%20package.">Get a quote</a></div>
-</div></div></section>
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
 
-<section><div class="wrap">
-<div class="sectiontop"><div><div class="label">04 — Our process</div><h2>Simple. Clear.<br>Creative.</h2></div></div>
-<div class="process"><div class="step"><span class="n">01</span><h3>Brief</h3><p>You tell us your idea, business and what you want to achieve.</p></div><div class="step"><span class="n">02</span><h3>Build</h3><p>We turn the brief into a visual or digital concept.</p></div><div class="step"><span class="n">03</span><h3>Refine</h3><p>We review, adjust and polish until everything feels right.</p></div><div class="step"><span class="n">04</span><h3>Launch</h3><p>Your final files are delivered ready to post, print or publish.</p></div></div>
-</div></section>
+    <nav class="navbar">
 
-<section><div class="wrap"><div class="testimonial"><div class="quote">“Your business already has a story. We help you make it impossible to ignore.”</div><div class="who">ONYX ENTERPRISE — DESIGN • DIGITAL • PRINT</div></div></div></section>
+        <div class="container nav-inner">
 
-<section id="contact" class="cta"><div class="wrap"><div class="label">05 — Start something</div><h2>Let's make your next idea look serious.</h2><p>Need a flyer? Website? Animated advert? Packaging? Or a complete business makeover? Send us a message and let's talk.</p><a class="btn light" href="https://wa.me/2349115375285?text=Hello%20Onyx%20Enterprise%2C%20I%27d%20like%20to%20start%20a%20project.">Chat on WhatsApp ↗</a><div class="contactline">Call or WhatsApp: 09115375285</div></div></section>
-<footer><div class="wrap foot"><div>© 2026 ONYX ENTERPRISE. All rights reserved.</div><div>Built for brands that want to be seen.</div></div></footer>
+
+            <a
+                href="#"
+                class="logo"
+            >
+
+                <span class="logo-mark">
+                    O
+                </span>
+
+                ONYX ENTERPRISE
+
+            </a>
+
+
+            <div class="nav-links">
+
+                <a href="#services">
+                    Services
+                </a>
+
+                <a href="#work">
+                    Work
+                </a>
+
+                <a href="#about">
+                    About
+                </a>
+
+                <a href="#contact">
+                    Contact
+                </a>
+
+            </div>
+
+
+            <div class="nav-right">
+
+                <span
+                    class="user-name"
+                    id="userName"
+                >
+                    Welcome
+                </span>
+
+
+                <a
+                    href="https://wa.me/2349115375285"
+                    class="nav-button"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    WhatsApp ↗
+                </a>
+
+
+                                <button
+                    class="mobile-menu"
+                    type="button"
+                    onclick="toggleMenu()"
+                    aria-label="openmenu"
+                >
+                    ☰
+                </button>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <!-- =========================
+         MOBILE NAVIGATION
+    ========================== -->
+
+    <div
+        class="mobile-nav"
+        id="mobileNav"
+    >
+
+        <a href="#services">
+            Services
+        </a>
+
+        <a href="#work">
+            Work
+        </a>
+
+        <a href="#about">
+            About
+        </a>
+
+        <a href="#contact">
+            Contact
+        </a>
+
+    </div>
+
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <main>
+
+        <section
+            class="hero"
+            id="home"
+        >
+
+            <div class="container hero-grid">
+
+
+                <div class="hero-content">
+
+                    <div class="hero-label">
+                        CREATIVE & DIGITAL STUDIO
+                    </div>
+
+
+                    <h1>
+                        Built to
+                        <span>stand out.</span>
+                    </h1>
+
+
+                    <p class="hero-text">
+
+                        Welcome
+                        <strong id="heroUserName">
+                            there
+                        </strong>.
+
+                        Onyx Enterprise helps businesses
+                        build powerful brands, digital
+                        experiences and visual identities
+                        that get noticed.
+
+                    </p>
+
+
+                    <div class="hero-actions">
+
+                        <a
+                            href="#work"
+                            class="primary-button"
+                        >
+                            View Our Work
+                            <span>↗</span>
+                        </a>
+
+
+                        <a
+                            href="https://wa.me/2349115375285"
+                            class="secondary-button"
+                            target="_blank"
+                            rel="noopener"
+                        >
+                            Start a Conversation
+                        </a>
+
+                    </div>
+
+
+                    <div class="hero-note">
+
+                        <span class="status-dot"></span>
+
+                        Available for new projects
+
+                    </div>
+
+                </div>
+
+
+                <!-- HERO VISUAL -->
+
+                <div class="hero-visual">
+
+                    <div class="visual-card">
+
+                        <div class="visual-top">
+
+                            <span>
+                                ONYX / 01
+                            </span>
+
+                            <span>
+                                CREATIVE
+                            </span>
+
+                        </div>
+
+
+                        <div class="visual-center">
+
+                            <div class="big-o">
+                                O
+                            </div>
+
+                            <p>
+                                DESIGN
+                                <br>
+                                DIGITAL
+                                <br>
+                                IMPACT
+                            </p>
+
+                        </div>
+
+
+                        <div class="visual-bottom">
+
+                            <span>
+                                EST. 2026
+                            </span>
+
+                            <span>
+                                LAGOS, NIGERIA
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             SERVICES
+        ========================== -->
+
+        <section
+            class="services section"
+            id="services"
+        >
+
+            <div class="container">
+
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <span class="section-label">
+                            WHAT WE DO
+                        </span>
+
+                        <h2>
+                            Services designed
+                            <br>
+                            for impact.
+                        </h2>
+
+                    </div>
+
+
+                    <p>
+
+                        From branding to digital
+                        experiences, we help businesses
+                        present themselves professionally
+                        and confidently.
+
+                    </p>
+
+                </div>
+
+
+                <div class="services-grid">
+
+
+                    <article class="service-card">
+
+                        <span class="service-number">
+                            01
+                        </span>
+
+                        <h3>
+                            Graphic Design
+                        </h3>
+
+                        <p>
+                            Logos, flyers, posters,
+                            social media designs,
+                            business cards and complete
+                            brand identities.
+                        </p>
+
+                        <span class="service-arrow">
+                            ↗
+                        </span>
+
+                    </article>
+
+
+                    <article class="service-card">
+
+                        <span class="service-number">
+                            02
+                        </span>
+
+                        <h3>
+                            Motion Graphics
+                        </h3>
+
+                        <p>
+                            Creative animations and
+                            motion visuals that make
+                            your brand more engaging.
+                        </p>
+
+                        <span class="service-arrow">
+                            ↗
+                        </span>
+
+                    </article>
+
+
+                    <article class="service-card">
+
+                        <span class="service-number">
+                            03
+                        </span>
+
+                        <h3>
+                            Web Design
+                        </h3>
+
+                        <p>
+                            Modern responsive websites
+                            designed to give businesses
+                            a strong online presence.
+                        </p>
+
+                        <span class="service-arrow">
+                            ↗
+                        </span>
+
+                    </article>
+
+
+                    <article class="service-card">
+
+                        <span class="service-number">
+                            04
+                        </span>
+
+                        <h3>
+                            Online Assistance
+                        </h3>
+
+                        <p>
+                            Digital support and online
+                            solutions that help businesses
+                            handle their everyday needs.
+                        </p>
+
+                        <span class="service-arrow">
+                            ↗
+                        </span>
+
+                    </article>
+
+
+                    <article class="service-card">
+
+                        <span class="service-number">
+                            05
+                        </span>
+
+                        <h3>
+                            Product Packaging
+                        </h3>
+
+                        <p>
+                            Professional packaging
+                            concepts that make products
+                            look premium and memorable.
+                        </p>
+
+                        <span class="service-arrow">
+                            ↗
+                        </span>
+
+                    </article>
+
+
+                    <article class="service-card">
+
+                        <span class="service-number">
+                            06
+                        </span>
+
+                        <h3>
+                            Printing
+                        </h3>
+
+                        <p>
+                            Quality printing for business
+                            cards, flyers, banners,
+                            packaging and more.
+                        </p>
+
+                        <span class="service-arrow">
+                            ↗
+                        </span>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             WORK / PORTFOLIO
+        ========================== -->
+
+        <section
+            class="work section"
+            id="work"
+        >
+
+            <div class="container">
+
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <span class="section-label">
+                            SELECTED WORK
+                        </span>
+
+                        <h2>
+                            Work that speaks
+                            <br>
+                            for itself.
+                        </h2>
+
+                    </div>
+
+
+                    <p>
+                        A selection of creative and
+                        digital projects from Onyx
+                        Enterprise.
+                    </p>
+
+                </div>
+
+
+                <div class="work-grid">
+
+
+                    <article class="work-card work-large">
+
+                        <div class="work-placeholder">
+
+                            <span>
+                                BRAND IDENTITY
+                            </span>
+
+                            <div class="placeholder-logo">
+                                O
+                            </div>
+
+                        </div>
+
+
+                        <div class="work-info">
+
+                            <div>
+
+                                <h3>
+                                    Brand Identity
+                                </h3>
+
+                                <p>
+                                    Visual Identity
+                                </p>
+
+                            </div>
+
+                            <span>
+                                ↗
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="work-card">
+
+                        <div class="work-placeholder">
+
+                            <span>
+                                WEB DESIGN
+                            </span>
+
+                            <div class="placeholder-browser">
+
+                                <div></div>
+                                <div></div>
+                                <div></div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="work-info">
+
+                            <div>
+
+                                <h3>
+                                    Digital Experience
+                                </h3>
+
+                                <p>
+                                    Web Design
+                                </p>
+
+                            </div>
+
+                            <span>
+                                ↗
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="work-card">
+
+                        <div class="work-placeholder">
+
+                            <span>
+                                MOTION
+                            </span>
+
+                            <div class="motion-symbol">
+                                ▶
+                            </div>
+
+                        </div>
+
+
+                        <div class="work-info">
+
+                            <div>
+
+                                <h3>
+                                    Motion Graphics
+                                </h3>
+
+                                <p>
+                                    Animation & Visuals
+                                </p>
+
+                            </div>
+
+                            <span>
+                                ↗
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="work-card">
+
+                        <div class="work-placeholder">
+
+                            <span>
+                                PACKAGING
+                            </span>
+
+                            <div class="package-symbol">
+                                BOX
+                            </div>
+
+                        </div>
+
+
+                        <div class="work-info">
+
+                            <div>
+
+                                <h3>
+                                    Product Packaging
+                                </h3>
+
+                                <p>
+                                    Packaging Design
+                                </p>
+
+                            </div>
+
+                            <span>
+                                ↗
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             ABOUT
+        ========================== -->
+
+        <section
+            class="about section"
+            id="about"
+        >
+
+            <div class="container about-grid">
+
+
+                <div class="about-heading">
+
+                    <span class="section-label">
+                        ABOUT ONYX
+                    </span>
+
+                    <h2>
+                        Less noise.
+                        <br>
+                        More impact.
+                    </h2>
+
+                </div>
+
+
+                <div class="about-content">
+
+                    <p class="about-main">
+
+                        Onyx Enterprise is a creative
+                        and digital studio focused on
+                        helping businesses look better,
+                        communicate clearly and build
+                        a stronger presence.
+
+                    </p>
+
+
+                    <p>
+
+                        We combine creativity, design
+                        and technology to create
+                        practical solutions for modern
+                        businesses.
+
+                    </p>
+
+
+                    <div class="about-stats">
+
+                        <div>
+
+                            <strong>
+                                01
+                            </strong>
+
+                            <span>
+                                Creative
+                            </span>
+
+                        </div>
+
+
+                        <div>
+
+                            <strong>
+                                02
+                            </strong>
+
+                            <span>
+                                Digital
+                            </span>
+
+                        </div>
+
+
+                        <div>
+
+                            <strong>
+                                03
+                            </strong>
+
+                            <span>
+                                Professional
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             CONTACT
+        ========================== -->
+
+        <section
+            class="contact section"
+            id="contact"
+        >
+
+            <div class="container">
+
+                <div class="contact-box">
+
+
+                    <div class="contact-content">
+
+                        <span class="section-label">
+                            HAVE A PROJECT?
+                        </span>
+
+
+                        <h2>
+                            Let's build
+                            <br>
+                            something great.
+                        </h2>
+
+
+                        <p>
+
+                            Tell us what you have in mind
+                            and let's turn the idea into
+                            something real.
+
+                        </p>
+
+
+                        <a
+                            href="https://wa.me/2349115375285"
+                            class="contact-button"
+                            target="_blank"
+                            rel="noopener"
+                        >
+                            Chat with Onyx on WhatsApp
+                            <span>↗</span>
+                        </a>
+
+                    </div>
+
+
+                    <div class="contact-mark">
+
+                        <span>
+                            O
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer class="footer">
+
+        <div class="container">
+
+
+            <div class="footer-top">
+
+
+                <div class="footer-brand">
+
+                    <a
+                        href="#"
+                        class="logo"
+                    >
+
+                        <span class="logo-mark">
+                            O
+                        </span>
+
+                        ONYX ENTERPRISE
+
+                    </a>
+
+
+                    <p>
+                        Creative. Digital.
+                        Professional.
+                    </p>
+
+                </div>
+
+
+                <div class="footer-links">
+
+                    <a href="#services">
+                        Services
+                    </a>
+
+                    <a href="#work">
+                        Work
+                    </a>
+
+                    <a href="#about">
+                        About
+                    </a>
+
+                    <a href="#contact">
+                        Contact
+                    </a>
+
+                </div>
+
+
+                <div class="footer-contact">
+
+                    <span>
+                        LET'S CONNECT
+                    </span>
+
+                    <a
+                        href="https://wa.me/2349115375285"
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        WhatsApp ↗
+                    </a>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <span>
+                    © 2026 Onyx Enterprise.
+                    All rights reserved.
+                </span>
+
+                <span>
+                    Lagos, Nigeria
+                </span>
+
+            </div>
+
+
+        </div>
+
+    </footer>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script>
+
+        /* =========================
+           DISPLAY USER NAME
+        ========================== */
+
+        const firstName =
+            localStorage.getItem("firstName") || "";
+
+        const lastName =
+            localStorage.getItem("lastName") || "";
+
+
+        const fullName =
+            `${firstName} ${lastName}`.trim();
+
+
+        const userName =
+            document.getElementById("userName");
+
+        const heroUserName =
+            document.getElementById("heroUserName");
+
+
+                if (fullName) {
+
+            if (userName) {
+                userName.textContent =
+                    "Hi, " + firstName;
+            }
+
+            if (heroUserName) {
+                heroUserName.textContent =
+                    firstName;
+            }
+
+        } else {
+
+            if (userName) {
+                userName.textContent =
+                    "Welcome";
+            }
+
+            if (heroUserName) {
+                heroUserName.textContent =
+                    "there";
+            }
+
+        }
+
+
+        /* =========================
+           MOBILE MENU
+        ========================== */
+
+        function toggleMenu() {
+
+            const mobileNav =
+                document.getElementById("mobileNav");
+
+            if (!mobileNav) return;
+
+            mobileNav.classList.toggle("active");
+
+        }
+
+
+        /* =========================
+           CLOSE MOBILE MENU
+           WHEN LINK IS CLICKED
+        ========================== */
+
+        const mobileLinks =
+            document.querySelectorAll(
+                "#mobileNav a"
+            );
+
+
+        mobileLinks.forEach(function(link) {
+
+            link.addEventListener(
+                "click",
+                function() {
+
+                    const mobileNav =
+                        document.getElementById(
+                            "mobileNav"
+                        );
+
+                    if (mobileNav) {
+
+                        mobileNav.classList.remove(
+                            "active"
+                        );
+
+                    }
+
+                }
+            );
+
+        });
+
+
+        /* =========================
+           NAVBAR SCROLL EFFECT
+        ========================== */
+
+        window.addEventListener(
+            "scroll",
+            function() {
+
+                const navbar =
+                    document.querySelector(
+                        ".navbar"
+                    );
+
+                if (!navbar) return;
+
+
+                if (window.scrollY > 30) {
+
+                    navbar.classList.add(
+                        "scrolled"
+                    );
+
+                } else {
+
+                    navbar.classList.remove(
+                        "scrolled"
+                    );
+
+                }
+
+            }
+        );
+
+    </script>
+
+
 </body>
+
 </html>
